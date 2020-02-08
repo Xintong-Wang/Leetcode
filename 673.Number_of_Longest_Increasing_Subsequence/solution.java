@@ -8,8 +8,8 @@ class Solution {
             end[i] = 1;
         }
         for(int i = 0; i < len; i++){
-            for(int j = 0; j < len; j++){
-                if(nums[i] < nums[j])
+            for(int j = 0; j < i; j++){
+                if(nums[i] <= nums[j])
                     continue;
                 if(end[i] == end[j] + 1)
                     cnt[i] += cnt[j];
